@@ -130,7 +130,6 @@ function send_telegram_lead($fields) {
         ]);
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
         $sent = $response !== false && $httpCode >= 200 && $httpCode < 300;
     } else {
         $context = stream_context_create([
@@ -154,6 +153,6 @@ function send_telegram_lead($fields) {
 send_telegram_lead($fields);
 
 $query = http_build_query($_GET);
-$location = 'thanks.php' . ($query !== '' ? '?' . $query : '');
+$location = '/api/thanks.php' . ($query !== '' ? '?' . $query : '');
 header('Location: ' . $location, true, 303);
 exit;
