@@ -244,7 +244,7 @@ function field_value($name) {
                         <li>You can expect a practical, no-pressure conversation.</li>
                     </ul>
                     <div class="thanks__actions">
-                        <a class="thanks__button" href="./">Back to home</a>
+                        <a class="thanks__button" href="../">Back to home</a>
                     </div>
                 </div>
                 <aside class="thanks__summary">
